@@ -8,7 +8,7 @@
   </p>
   <br>
     
-  [**View the Web Api**](https://exceltodynamodbjson.vercel.app)
+  [**View the Web Api**](https://favpets-api-production.up.railway.app/)
 </div>
 
 ## Table of Contents
@@ -26,11 +26,7 @@
 
 ## Live Demo
 
-Check out the web version of **Favorite Pets API** here: [https://exceltodynamodbjson.vercel.app](https://exceltodynamodbjson.vercel.app)
-
-<br>
-<img src="https://raw.githubusercontent.com/madiajijah11/exceltodynamodbjson/main/public/exceltodynamodbjson.jpg">
-<br>
+Check out the web version of **Favorite Pets API** here: [https://favpets-api-production.up.railway.app/](https://favpets-api-production.up.railway.app/)
 
 ## Technologies
 
