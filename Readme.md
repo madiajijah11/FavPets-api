@@ -22,7 +22,7 @@
 
 ## Description
 
-**Favorite Pets API** is a an web api to send into client.
+**Favorite Pets API** is a an web api to receive request and send response to client..
 
 ## Live Demo
 
