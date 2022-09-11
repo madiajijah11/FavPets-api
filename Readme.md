@@ -32,7 +32,7 @@ Check out the web version of **Favorite Pets API** here: [https://favpets-api-pr
 
 -   [Prisma](https://www.prisma.io/)
 -   [Expressjs](https://expressjs.com/)
--   [Vercel](https://vercel.com)
+-   [Railway](https://railway.app/)
 
 ## Run Locally
 
