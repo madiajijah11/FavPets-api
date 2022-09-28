@@ -8,6 +8,23 @@ const newPet = async (req, res) => {
 	const height = Math.floor(Math.random() * 2) + 1;
 	const width = height === 1 ? 3 : 4;
 
+	if (src === "" || src === undefined || src === null) {
+		if (
+			src !== ".jpg" ||
+			src !== ".png" ||
+			src !== ".jpeg" ||
+			src !== ".gif" ||
+			src !== ".svg"
+		) {
+			return res.status(400).json({
+				message: "Image must be a valid image",
+			});
+		}
+		return res.status(400).json({
+			message: "Image is required",
+		});
+	}
+
 	if (!src || !height || !width || !name || !age || !type || !breed || !description) {
 		return res.status(400).json({
 			message: "Please fill all fields",
@@ -96,7 +113,7 @@ const deletePetById = async (req, res) => {
 	try {
 		const pet = await prisma.Pet.delete({
 			where: {
-				id: id,
+				id,
 			},
 		});
 		res.status(200).json(pet);
@@ -120,7 +137,7 @@ const getPetById = async (req, res) => {
 	try {
 		const pet = await prisma.Pet.findUnique({
 			where: {
-				id: id,
+				id,
 			},
 		});
 		res.status(200).json(pet);
