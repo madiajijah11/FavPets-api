@@ -18,7 +18,6 @@
 		"validator": "^13.7.0"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.19",
 		"prisma": "^4.3.1"
 	}
 }
