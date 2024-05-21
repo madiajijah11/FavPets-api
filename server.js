@@ -23,12 +23,12 @@ app.use("/api/v1/users", usersRoutes);
 app.use("/api/v1/pets", petsRoutes);
 
 app.route("/").get((_req, res) => {
-	res.sendFile(`${process.cwd()}/index.html`);
+  res.sendFile(`${process.cwd()}/index.html`);
 });
 
 const listener = app.listen(process.envPORT || 3000, (error) => {
-	if (error) {
-		return console.log("something bad happened", error);
-	}
-	console.log(`server is listening on ${listener.address().port}`);
+  if (error) {
+    return console.log("something bad happened", error);
+  }
+  console.log(`server is listening on ${listener.address().port}`);
 });

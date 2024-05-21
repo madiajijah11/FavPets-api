@@ -11,9 +11,9 @@ router.put("/:id", requireAuth, petsControllerPrisma.updatePetById); // Update p
 router.get("/:id", requireAuth, petsControllerPrisma.getPetById); // Get pet by id
 router.delete("/:id", requireAuth, petsControllerPrisma.deletePetById); // Delete pet by id
 router.all("/", (_req, res, _next) => {
-	res.status(405).json({
-		message: "Method not allowed",
-	});
+  res.status(405).json({
+    message: "Method not allowed",
+  });
 });
 
 module.exports = router;
