@@ -1,5 +1,5 @@
 const convertBigIntToString = (pets) => {
-  return pets.map((pet) => {
+  const convert = (pet) => {
     const petCopy = { ...pet };
     for (let key in petCopy) {
       if (typeof petCopy[key] === "bigint") {
@@ -7,7 +7,13 @@ const convertBigIntToString = (pets) => {
       }
     }
     return petCopy;
-  });
+  };
+
+  if (Array.isArray(pets)) {
+    return pets.map(convert);
+  } else {
+    return convert(pets);
+  }
 };
 
 module.exports = { convertBigIntToString };

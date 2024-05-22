@@ -47,7 +47,10 @@ const newPet = async (req, res) => {
         ownerId: owner,
       },
     });
-    res.status(200).json(newPet);
+
+    const petWithNoBigInt = convertBigIntToString(newPet);
+
+    res.status(200).json(petWithNoBigInt);
   } catch (error) {
     res.status(500).json({
       message: "Something went wrong",
@@ -120,7 +123,10 @@ const deletePetById = async (req, res) => {
         id,
       },
     });
-    res.status(200).json(pet);
+
+    const petWithNoBigInt = convertBigIntToString(pet);
+
+    res.status(200).json(petWithNoBigInt);
   } catch (error) {
     res.status(500).json({
       message: "Something went wrong",
@@ -144,7 +150,14 @@ const getPetById = async (req, res) => {
         id,
       },
     });
-    res.status(200).json(pet);
+
+    console.log(pet);
+
+    const petWithNoBigInt = convertBigIntToString(pet);
+
+    // console.log(petWithNoBigInt);
+
+    res.status(200).json(petWithNoBigInt);
   } catch (error) {
     res.status(500).json({
       message: "Something went wrong",
@@ -177,7 +190,10 @@ const updatePetById = async (req, res) => {
         description,
       },
     });
-    res.status(200).json(pet);
+
+    const petWithNoBigInt = convertBigIntToString(pet);
+
+    res.status(200).json(petWithNoBigInt);
   } catch (error) {
     res.status(500).json({
       message: "Something went wrong",
